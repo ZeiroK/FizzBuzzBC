@@ -7,11 +7,15 @@ If it's not a multiple of 3 or 5 print Not a Fizz Buzz!*/
 
 contract FizzBuzz{
     
-    string public fizz1 = "Fizz";
-    string public buzz1 = "Buzz";
-    string public fizzbuzz1 = "Fizz Buzz";
-    string public notfizzbuzz1 = "Not Fizz Buzz";
-    uint input = 21;
+    string fizz1 = "Fizz";
+    string buzz1 = "Buzz";
+    string fizzbuzz1 = "Fizz Buzz";
+    string notfizzbuzz1 = "Not Fizz Buzz";
+    uint private input;
+
+    function setInput(uint _input) public{
+        input = _input;
+    }
 
     function getFizzBuzzed() public returns(string memory){
         if (input == 0)
